@@ -1,0 +1,302 @@
+* {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: calc(15px + 0.390625vw);
+}
+
+body {
+  margin: 0;
+}
+
+li {
+  margin: 0 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
+
+button {
+  border: none;
+  outline: 0;
+  cursor: pointer;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  text-transform: capitalize;
+}
+
+.header-content-padding {
+  padding: 1.5em 4em;
+}
+
+.flex {
+  display: flex;
+}
+
+.content-between {
+  justify-content: space-between;
+}
+
+.content-around {
+  justify-content: space-around;
+}
+
+.content-center {
+  justify-content: center;
+}
+
+.align-center {
+  justify-items: center;
+  align-items: center;
+}
+
+.direction-column {
+  flex-direction: column;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.list-none {
+  list-style-type: none;
+}
+
+.font-large {
+  font-size: 2rem;
+}
+
+.font-medium {
+  font-size: 0.5em;
+}
+
+.white {
+  color: #fff;
+}
+
+.background-green-primary {
+  background-color: #cbf3f0;
+}
+
+.background-orange-primary {
+  background-color: #f5bf69;
+}
+
+.background-blue-primary {
+  background-color: #cbf3f0;
+}
+
+.background-black-primary {
+  background-color: #333333;
+}
+
+.text-middle {
+  text-align: center;
+}
+
+.width-half {
+  width: 50%;
+}
+
+.section-padding {
+  padding: 2em;
+}
+
+.footer-padding {
+  padding: 0.5em 2em;
+}
+
+.hero {
+  min-height: 85vh;
+}
+
+.hero-section-padding {
+  padding: 0 4em;
+}
+
+.hero-title {
+  text-transform: uppercase;
+}
+
+.section-background {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.hero-home {
+  background-image: url(images/background.png);
+}
+
+.hero-button {
+  padding: 0.5em 1em;
+  margin: 1em 0;
+}
+
+.hero-button:hover {
+  background-color: #fff;
+}
+
+.about-us {
+  min-height: 30vh;
+  justify-content: center;
+}
+
+.products-card {
+  margin: 2em auto;
+}
+
+.products-card-image {
+  max-width: 5em;
+}
+
+.persona {
+  background-image: url(images/bg-grid.png);
+  background-position-x: center;
+  background-position-y: center;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.persona-image {
+  width: 100%;
+}
+
+.footer {
+  min-height: 10vh;
+}
+
+@media only screen and (max-width: 700px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 0.7em;
+  }
+
+  .font-large {
+    font-size: 1em;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .hero {
+    min-height: 40vh;
+  }
+
+  .footer-padding {
+    padding: 0.5rem;
+  }
+
+  #menu__toggle {
+    opacity: 0;
+  }
+
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;
+  }
+
+  .menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: #616161;
+
+    transition-duration: 0.25s;
+  }
+  .menu__btn > span::before {
+    content: "";
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: "";
+    top: 8px;
+  }
+
+  .menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 10em;
+    height: 100%;
+    margin: 0;
+    padding: 3em 0;
+    list-style: none;
+    background-color: #eceff1;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+    transition-duration: 0.25s;
+  }
+
+  .menu__item {
+    display: block;
+    padding: 0.5em 1em;
+    color: #333;
+    font-family: "Roboto", sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: 0.25s;
+  }
+  .menu__item:hover {
+    background-color: #cfd8dc;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  h1 {
+    font-size: 6em;
+  }
+  .hero-section-padding {
+    padding: 5em 4em 0 4em;
+  }
+  .hamburger-menu {
+    visibility: hidden;
+    display: none;
+  }
+}
