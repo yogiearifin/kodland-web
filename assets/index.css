@@ -111,6 +111,10 @@ button {
   width: 50%;
 }
 
+.width-full {
+  width: 100%;
+}
+
 .section-padding {
   padding: 2em;
 }
